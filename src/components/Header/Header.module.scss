@@ -1,0 +1,15 @@
+.header {
+  background: #000;
+}
+.wrapper {
+  padding: 24px 15px;
+  display: flex;
+  align-items: center;
+  max-width: 1640px;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 50px;
+}

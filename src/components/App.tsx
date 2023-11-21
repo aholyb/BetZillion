@@ -1,19 +1,17 @@
-import axios from 'axios';
-import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../pages/Home/Home';
+
+import { Header } from '.';
 
 function App() {
-  // Test for apply sql to node
-  useEffect(() => {
-    axios({
-      method: 'GET',
-      url: 'http://localhost:5173/api/users',
-      responseType: 'json',
-    })
-      .then((data) => console.log(data.data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  return <div>BetZillion</div>;
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

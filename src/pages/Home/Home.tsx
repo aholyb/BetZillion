@@ -1,10 +1,11 @@
-import { Container } from '../../components';
+import { HomeScreen } from '../../components';
+import { Home as HomeBlock } from './Home.styles';
 
 const Home = () => {
   return (
-    <div>
-      <Container>Home</Container>
-    </div>
+    <HomeBlock>
+      <HomeScreen />
+    </HomeBlock>
   );
 };
 

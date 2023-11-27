@@ -1,18 +1,18 @@
-import styles from './Header.module.scss';
+import { HeaderBlock, Wrapper, Info } from './Header.styles';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import Settings from './Settings/Settings';
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.wrapper}>
-        <div className={styles.info}>
+    <HeaderBlock>
+      <Wrapper>
+        <Info>
           <Logo />
           <Menu />
-        </div>
+        </Info>
         <Settings />
-      </div>
-    </header>
+      </Wrapper>
+    </HeaderBlock>
   );
 };

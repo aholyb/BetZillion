@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import styles from './Menu.module.scss';
+import { Nav, Ul, Li, MenuLink } from './Menu.styles';
 
 // temporary solution
 const mocks = [
@@ -47,17 +46,15 @@ const mocks = [
 
 const Menu = () => {
   return (
-    <nav>
-      <ul className={styles.ul}>
+    <Nav>
+      <Ul>
         {mocks.map(({ title, link }) => (
-          <li key={title}>
-            <Link to={link} className={styles.link}>
-              {title}
-            </Link>
-          </li>
+          <Li key={title}>
+            <MenuLink to={link}>{title}</MenuLink>
+          </Li>
         ))}
-      </ul>
-    </nav>
+      </Ul>
+    </Nav>
   );
 };
 

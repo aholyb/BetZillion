@@ -1,4 +1,4 @@
-import styles from './Settings.module.scss';
+import { Wrapper, Language, Login } from './Settings.styles';
 
 // temporary solution
 const languages = [
@@ -14,11 +14,11 @@ const languages = [
 
 const Settings = () => {
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       {/* temporary solution */}
-      <div className={styles.language}>{languages[0].lang}</div>
-      <div className={styles.login}>Log in / Sign up</div>
-    </div>
+      <Language>{languages[0].lang}</Language>
+      <Login>Log in / Sign up</Login>
+    </Wrapper>
   );
 };
 

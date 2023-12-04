@@ -1,3 +1,4 @@
+import React from 'react';
 import { Wrapper, Language, Login } from './Settings.styles';
 
 // temporary solution

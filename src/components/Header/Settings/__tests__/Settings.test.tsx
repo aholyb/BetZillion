@@ -1,8 +1,11 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { describe, test, expect } from '@jest/globals';
+import { render } from '@testing-library/react';
 import Settings from '../Settings';
 
-it('Component is correct', () => {
-  const component = renderer.create(<Settings />);
-  expect(component.toJSON()).toMatchSnapshot();
+describe('Correctly view component of', () => {
+  test('Settings component', () => {
+    const { container } = render(<Settings />);
+
+    expect(container).toMatchSnapshot();
+  });
 });

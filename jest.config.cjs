@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
 module.exports = {
-  transform: {
-    '^.+\\.tsx?$': 'babel-jest',
-  },
+  testEnvironment: 'jest-environment-jsdom',
+  extensionsToTreatAsEsm: ['.tsx'],
 };
